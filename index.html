@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="style.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>React Sports Game</title>
@@ -30,8 +31,43 @@
           <div>
             <h1> Greg's React Sport's Game</h1>
             <h2>Let's go Team</h2>
+            <Team />
           </div>
         );
+      }
+      class Team extends React.Component {
+        constructor(props) {
+          super(props);
+
+          this.state = {
+            score: 0,
+            shotsTaken: 0,
+            teamName: "",
+            teamLogo: "",
+          };
+        }
+        handleIncrement = (event) => {
+          if (this.state.score < 500) {
+            this.setState((state, props) => ({
+              score: state.score + 2,
+              shotsTaken: state.shotsTaken + 1,
+            }));
+          }
+        };
+
+        render() {
+          let countClassName = "";
+          if (this.state.score >= 10) {
+            countClassName = "special";
+          }
+          return (
+            <div className="scoreArea1">
+              <span className={countClassName}>{this.state.score}</span>
+              <button onClick={this.handleIncrement}>+</button>
+              <span>{this.state.shotsTaken}</span>
+            </div>
+          );
+        }
       }
       ReactDOM.render(<App />, document.getElementById("root"));
     </script>
