@@ -1,8 +1,13 @@
-.special {
-  color: red;
+h1 {
+  text-align: center;
 }
-.scoreArea1 {
-  border: red;
-  height: 400px;
-  width: 400px;
+h2 {
+  text-align: center;
+}
+
+.boxArea {
+  display: flex;
+}
+.teamArea {
+  flex: 50%;
 }

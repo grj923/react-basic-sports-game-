@@ -29,8 +29,10 @@
       function App(props) {
         return (
           <div>
-            <h1> Greg's React Sport's Game</h1>
+            <h1>Greg's React Sport's Game</h1>
             <h2>Let's go Team</h2>
+            <br />
+            <br />
             <Team />
           </div>
         );
@@ -40,31 +42,58 @@
           super(props);
 
           this.state = {
-            score: 0,
-            shotsTaken: 0,
-            teamName: "",
-            teamLogo: "",
+            score1: 0,
+            score2: 0,
+            shotsTaken1: 0,
+            shotsTaken2: 0,
+            teamName1: "Hotshots",
+            teamLogo1: "",
+            teamName2: "Not The Hot Shots",
+            teamLogo2: "",
           };
         }
         handleIncrement = (event) => {
-          if (this.state.score < 500) {
+          if (this.state.score1 < 500) {
             this.setState((state, props) => ({
-              score: state.score + 2,
-              shotsTaken: state.shotsTaken + 1,
+              score1: state.score1 + 2,
+              shotsTaken1: state.shotsTaken1 + 1,
             }));
           }
         };
-
+        handleIncrement1 = (event) => {
+          if (this.state.score2 < 500) {
+            this.setState((state, props) => ({
+              score2: state.score2 + 2,
+              shotsTaken2: state.shotsTaken2 + 1,
+            }));
+          }
+        };
         render() {
+          let teamName1 = "Hotshots";
           let countClassName = "";
           if (this.state.score >= 10) {
             countClassName = "special";
           }
           return (
-            <div className="scoreArea1">
-              <span className={countClassName}>{this.state.score}</span>
-              <button onClick={this.handleIncrement}>+</button>
-              <span>{this.state.shotsTaken}</span>
+            <div className="boxArea">
+              <div className="teamArea">
+                <h1>{this.state.teamName1}</h1>
+                <br />
+                <span className={countClassName}>{this.state.score1}</span>
+                <button className="button1" onClick={this.handleIncrement}>
+                  Shoot
+                </button>
+                <span>{this.state.shotsTaken1}</span>
+              </div>
+
+              <div className="teamArea">
+                <h1>{this.state.teamName2}</h1>
+                <span>{this.state.score2}</span>
+                <button className="button2" onClick={this.handleIncrement1}>
+                  Shoot
+                </button>
+                <span>{this.state.shotsTaken2}</span>
+              </div>
             </div>
           );
         }
