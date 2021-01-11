@@ -1,13 +1,58 @@
-h1 {
-  text-align: center;
+body {
+  background-color: rosybrown;
 }
-h2 {
-  text-align: center;
+.left {
+  float: left;
+  width: 500px;
+  height: 530px;
+  border: 3px solid black;
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/5/52/Basketball_court_dimensions.png);
+  border: 5px solid black;
 }
 
-.boxArea {
-  display: flex;
+.right {
+  float: right;
+  width: 500px;
+  height: 530px;
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/5/52/Basketball_court_dimensions.png);
+  border: 3px solid black;
 }
-.teamArea {
-  flex: 50%;
+.gameHeader {
+  text-align: center;
+}
+.scoreArea1 {
+  width: 500px;
+  background: turquoise;
+  position: relative;
+  text-align: center;
+  border: 1px solid black;
+  z-index: 1;
+}
+.scoreArea2 {
+  width: 500px;
+  background: turquoise;
+  position: relative;
+  text-align: center;
+  border: 1px solid black;
+  z-index: 1;
+}
+.shootButton {
+  background: blanchedalmond;
+  width: 50%;
+  height: 150px;
+  position: relative;
+  margin-left: 120px;
+  margin-bottom: 50px;
+  padding-top: 4px;
+}
+.button1 {
+  width: 60px;
+  height: 30px;
+}
+.button2 {
+  width: 60px;
+  height: 30px;
+}
+.numbers {
+  text-emphasis: bold;
 }
