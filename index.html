@@ -37,6 +37,7 @@
           </div>
         );
       }
+
       class Team extends React.Component {
         constructor(props) {
           super(props);
@@ -52,19 +53,28 @@
             teamLogo2: "",
           };
         }
+
         handleIncrement = (event) => {
-          if (this.state.score1 < 500) {
+          let randomNumber = Math.floor(Math.random() * 2);
+          console.log(randomNumber);
+          this.setState((state, props) => ({
+            shotsTaken1: state.shotsTaken1 + 1,
+          }));
+          if (randomNumber < 1) {
             this.setState((state, props) => ({
               score1: state.score1 + 2,
-              shotsTaken1: state.shotsTaken1 + 1,
             }));
           }
         };
         handleIncrement1 = (event) => {
-          if (this.state.score2 < 500) {
+          let randomNumber2 = Math.floor(Math.random() * 2);
+          console.log(randomNumber2);
+          this.setState((state, props) => ({
+            shotsTaken2: state.shotsTaken2 + 1,
+          }));
+          if (randomNumber2 < 1) {
             this.setState((state, props) => ({
               score2: state.score2 + 2,
-              shotsTaken2: state.shotsTaken2 + 1,
             }));
           }
         };
