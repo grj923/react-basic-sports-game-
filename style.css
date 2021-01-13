@@ -1,6 +1,7 @@
 body {
   background-color: rosybrown;
 }
+
 .left {
   float: left;
   width: 500px;
@@ -22,7 +23,7 @@ body {
 }
 .scoreArea1 {
   width: 500px;
-  background: turquoise;
+  /* background: turquoise; */
   position: relative;
   text-align: center;
   border: 1px solid black;
@@ -30,7 +31,7 @@ body {
 }
 .scoreArea2 {
   width: 500px;
-  background: turquoise;
+  /* background: turquoise; */
   position: relative;
   text-align: center;
   border: 1px solid black;
@@ -55,4 +56,12 @@ body {
 }
 .numbers {
   text-emphasis: bold;
+}
+.teamLogo1 {
+  height: 10px;
+  width: 10px;
+}
+.teamLogo1 {
+  height: 10px;
+  width: 10px;
 }
