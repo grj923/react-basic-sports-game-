@@ -26,18 +26,6 @@
     ></script>
 
     <script type="text/babel">
-      function App(props) {
-        return (
-          <div>
-            <h1 className="gameHeader">React Sports Game</h1>
-            <h2 className="gameHeader">Let's go Team</h2>
-            <br />
-            <br />
-            <Team />
-          </div>
-        );
-      }
-
       class Team extends React.Component {
         constructor(props) {
           super(props);
@@ -88,6 +76,15 @@
         render() {
           return (
             <div className="boxArea">
+              <div className="hotShotArea1">
+                <h2 className="hotShots">{this.props.name1}</h2>
+                <div>
+                  <img className="hotShotLogo" src={this.props.Logo1} />
+                </div>
+                <div className="notHotShots">
+                  <h2 className="notHotShotsTitle">{this.props.name2}</h2>
+                </div>
+              </div>
               <div className="left">
                 <div className="scoreArea1">
                   <h1>{this.state.teamName1}</h1>
@@ -142,6 +139,23 @@
           );
         }
       }
+      function App(props) {
+        return (
+          <div>
+            <Team
+              name1="Hotshots"
+              name2="Not HotShots"
+              Logo1="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Team_Impulse_logo.png/800px-Team_Impulse_logo.png"
+            />
+            <Team
+              name1="nothotShots"
+              name2="Not HotShots"
+              Logo1="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Team_Impulse_logo.png/800px-Team_Impulse_logo.png"
+            />
+          </div>
+        );
+      }
+
       ReactDOM.render(<App />, document.getElementById("root"));
     </script>
   </body>

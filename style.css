@@ -60,11 +60,12 @@ body {
 .numbers {
   text-emphasis: bold;
 }
-.teamLogo1 {
-  height: 10px;
-  width: 10px;
+.hotShotLogo {
+  height: 50px;
+  width: 50px;
+  margin-left: 20px;
 }
-.teamLogo1 {
-  height: 10px;
-  width: 10px;
+.hotShotArea1 {
+  margin-left: 210px;
+  align-content: center;
 }
