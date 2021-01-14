@@ -23,6 +23,8 @@ body {
 }
 .scoreArea1 {
   width: 500px;
+  height: 600px;
+  padding-top: 50px;
   /* background: turquoise; */
   position: relative;
   text-align: center;
@@ -31,6 +33,7 @@ body {
 }
 .scoreArea2 {
   width: 500px;
+  padding-top: 50px;
   /* background: turquoise; */
   position: relative;
   text-align: center;
